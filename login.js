@@ -1,25 +1,36 @@
+import { auth, db } from "./firebase.config.js";
+
 // Handle login form submission
-document.getElementById('login-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-  
-    // Get form values
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
-  
-    // Get stored user data from localStorage
-    const storedUser = JSON.parse(localStorage.getItem('userData'));
-  
-    // Check if user exists and credentials match
-    if (storedUser && storedUser.email === email && storedUser.password === password) {
-      alert('✅ Login successful! Redirecting to the dashboard...');
-      
+const loginForm = document.getElementById('login-form');
+
+loginForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // Get form values
+  const email = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value.trim();
+
+  try {
+    // Authenticate user with Firebase Authentication
+    const userCredential = await auth.signInWithEmailAndPassword(email, password);
+    const user = userCredential.user;
+
+    // Optionally, fetch additional user data from Firestore
+    const userDoc = await db.collection('users').doc(user.uid).get();
+    if (userDoc.exists) {
+      const userData = userDoc.data();
+      console.log('User data:', userData);
+
       // Store session data (optional)
-      sessionStorage.setItem('loggedInUser', JSON.stringify({ email: email }));
-  
-      // Redirect to dashboard page
-      window.location.href = 'pages/dashboard.html'; // Update path as needed
+      sessionStorage.setItem('loggedInUser', JSON.stringify(userData));
+
+      alert('✅ Login successful! Redirecting to the dashboard...');
+      window.location.href = 'pages/dashboard.html'; // Redirect to dashboard page
     } else {
-      alert('❌ Invalid email or password. Please try again!');
+      alert('❌ User data not found in Firestore.');
     }
-  });
-  
+  } catch (error) {
+    console.error('Error during login:', error);
+    alert(`❌ Login failed: ${error.message}`);
+  }
+});

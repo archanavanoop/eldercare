@@ -28,7 +28,6 @@
         <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required>
       </div>
 
-      <!-- Wrapping Login Button inside a blue box -->
       <div class="login-box">
         <button type="submit" class="submit-button">Login</button>
       </div>
@@ -41,7 +40,13 @@
     <p>Contact us at: contact@eldercare.com</p>
   </footer>
 
-  <script src="login.js"></script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+
+  <!-- Login logic -->
+  <script type="module" src="login.js"></script>
 </body>
 
 </html>
