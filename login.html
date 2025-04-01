@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - ElderCare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="ElderCare Logo" class="logo">
+    </div>
+    <h1>Login to Your Account</h1>
+  </header>
+
+  <section>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="login-email">Email:</label>
+        <input type="text" id="login-email" name="login-email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required>
+      </div>
+
+      <!-- Wrapping Login Button inside a blue box -->
+      <div class="login-box">
+        <button type="submit" class="submit-button">Login</button>
+      </div>
+
+      <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>Contact us at: contact@eldercare.com</p>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+
+</html>

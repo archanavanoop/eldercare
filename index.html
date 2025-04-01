@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElderCare - Welcome</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAsjhSDOAWhXJsZPVIoqzpFitKdAiNQFDM",
+      authDomain: "eldercareapp-bb3f2.firebaseapp.com",
+      projectId: "eldercareapp-bb3f2",
+      storageBucket: "eldercareapp-bb3f2.firebasestorage.app",
+      messagingSenderId: "496253298032",
+      appId: "1:496253298032:web:7288ec1b01dc52d91a1bb5"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="ElderCare Logo" class="logo">
+    </div>
+    <h1>Welcome to ElderCare</h1>
+    <nav>
+      <ul>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="medicine-reminder.html">Medicine Reminders</a></li>
+        <li><a href="appointment-reminder.html">Appointment Reminders</a></li>
+        <li><a href="emergency.html">Emergency Alerts</a></li>
+        <li><a href="voice.html">Voice Integration</a></li>
+        <li><a href="health-monitoring.html">Health Monitoring</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Care for Your Loved Ones</h2>
+    <p>Our platform helps both elders and caregivers manage daily tasks, reminders, and emergency alerts. We focus on a seamless, friendly, and warm experience for you.</p>
+  </section>
+
+  <!-- Authentication Buttons for Login and Sign Up -->
+  <div class="auth-container">
+    <!-- Login Button -->
+    <div class="auth-box">
+      <h3>Login</h3>
+      <a href="login.html">
+        <button class="auth-button">Login</button>
+      </a>
+    </div>
+
+    <!-- Sign Up Button -->
+    <div class="auth-box">
+      <h3>Sign Up</h3>
+      <a href="signup.html">
+        <button class="auth-button">Sign Up</button>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Contact us at: contact@eldercare.com</p>
+  </footer>
+
+  <!-- ✅ Add this here -->
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>

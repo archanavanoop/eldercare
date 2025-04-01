@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Reminders</title>
+  <link rel="stylesheet" href="style.css"> <!-- Include CSS file if needed -->
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="ElderCare Logo" class="logo">
+    </div>
+    <h1>Appointment Reminders</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="medicine-reminder.html">Medicine Reminder</a></li>
+        <li><a href="emergency.html">Emergency Alerts</a></li>
+        <li><a href="voice.html">Voice Integration</a></li>
+        <li><a href="health-monitoring.html">Health Monitoring</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Add a New Appointment Reminder</h2>
+    <!-- Appointment Reminder Form -->
+    <form id="appointment-form">
+      <label for="doctor-name">Doctor's Name:</label>
+      <input type="text" id="doctor-name" required>
+
+      <label for="appointment-date">Appointment Date:</label>
+      <input type="date" id="appointment-date" required>
+
+      <label for="appointment-time">Appointment Time:</label>
+      <input type="time" id="appointment-time" required>
+
+      <button type="submit">Add Reminder</button>
+    </form>
+
+    <h3>Your Appointment Reminders</h3>
+    <div id="appointment-list">
+      <!-- List of reminders will appear here -->
+    </div>
+  </section>
+
+  <footer>
+    <p>Contact us at: contact@eldercare.com</p>
+  </footer>
+
+  <!-- Correct JS without Firebase -->
+  <script src="appointment-reminder.js"></script>
+</body>
+</html>

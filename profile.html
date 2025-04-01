@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Management - ElderCare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="ElderCare Logo" class="logo">
+    </div>
+    <h1>Profile Management</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="appointment-reminder.html">Appointment Reminder</a></li>
+        <li><a href="emergency.html">Emergency Alerts</a></li>
+        <li><a href="voice.html">Voice Integration</a></li>
+        <li><a href="health-monitoring.html">Health Monitoring</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Update Your Profile</h2>
+    <form id="profile-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="emergency-contact">Emergency Contact:</label>
+      <input type="tel" id="emergency-contact" name="emergency-contact" placeholder="Enter emergency contact" required>
+
+      <button type="submit">Save Profile</button>
+    </form>
+
+    <h3>Your Profile Details</h3>
+    <div id="profile-details">
+      <!-- Profile details will be shown here dynamically -->
+    </div>
+    <button id="load-profile-btn">Load Profile</button>
+  </section>
+
+  <footer>
+    <p>Contact us at: contact@eldercare.com</p>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+
+</html>

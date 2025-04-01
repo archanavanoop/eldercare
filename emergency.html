@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Alerts - ElderCare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="ElderCare Logo" class="logo">
+    </div>
+    <h1>Emergency Alerts</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="medicine-reminder.html">Medicine Reminders</a></li>
+        <li><a href="appointment-reminder.html">Appointment Reminders</a></li>
+        <li><a href="voice.html">Voice Integration</a></li>
+        <li><a href="health-monitoring.html">Health Monitoring</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Emergency Alert System</h2>
+    <p>Click the button below to send an emergency alert to the caregiver.</p>
+
+    <div class="emergency-container">
+      <button id="send-alert-btn" class="emergency-btn">🚨 Send Emergency Alert</button>
+      <p id="alert-status"></p>
+    </div>
+
+    <h2>Missed Dosage & Appointment Alerts</h2>
+    <p>Track and notify the caregiver about missed doses or appointments.</p>
+
+    <div class="alert-container">
+      <button id="check-missed-btn" class="alert-btn">🔔 Check for Missed Alerts</button>
+      <p id="missed-status"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Contact us at: contact@eldercare.com</p>
+  </footer>
+
+  <script src="emergency.js"></script>
+</body>
+</html>
