@@ -6,13 +6,15 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.2/firebase
 
 // Your Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+    apiKey: "AIzaSyAy2RVVkx2radPAgfG0gRYQjPpBcza0Y78",
+    authDomain: "elderweb-97799.firebaseapp.com",
+    projectId: "elderweb-97799",
+    storageBucket: "elderweb-97799.firebasestorage.app",
+    messagingSenderId: "914048219727",
+    appId: "1:914048219727:web:490ed46aaec9cad0d7483a"
+  };
+  
+  
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
